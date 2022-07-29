@@ -16,8 +16,8 @@ module.exports = {
 
         const { guild, member, customId } = interaction;
 
-        let CategoryID = "1001329158414155847";
-        let EveryoneID = "1001329156224725022";
+        let CategoryID = "989499794990960680";
+        let EveryoneID = "885392997162823681";
 
         if (["product", "ordering", "question"].includes(customId)) {
             const ID = Math.floor(Math.random() * 9000) + 1000;

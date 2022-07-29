@@ -8,9 +8,9 @@ const {
 module.exports = {
     name: "guildMemberAdd",
     async execute(member) {
-        let channel = member.guild.channels.cache.get("1002067643672580117");
+        let channel = member.guild.channels.cache.get("989484630795239454");
 
-        await member.roles.add(member.guild.roles.cache.get("1002117475032371231"));
+        await member.roles.add(member.guild.roles.cache.get("989437129618759681"));
 
         const embed = new EmbedBuilder()
             .setAuthor({

@@ -3,7 +3,7 @@ const { EmbedBuilder } = require("discord.js");
 module.exports = {
     name: "guildMemberUpdate",
     async execute(oldMember, newMember) {
-        let channel = newMember.guild.channels.cache.get("1002067643672580117");
+        let channel = newMember.guild.channels.cache.get("885392997611601933");
 
         const embed = new EmbedBuilder()
             .setAuthor({

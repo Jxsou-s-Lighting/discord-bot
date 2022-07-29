@@ -6,7 +6,7 @@ module.exports = {
         .setDescription("Returns the booster embed.")
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
     async execute(interaction, client) {
-        let channel = interaction.guild.channels.cache.get("1002067643672580117");
+        let channel = interaction.guild.channels.cache.get("989484691130298428");
 
         const embed = new EmbedBuilder()
             .setAuthor({

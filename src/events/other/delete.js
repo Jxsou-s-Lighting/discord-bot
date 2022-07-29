@@ -1,10 +1,4 @@
-const {
-    EmbedBuilder,
-    ActionRowBuilder,
-    ButtonBuilder,
-    ButtonStyle,
-} = require("discord.js");
-
+const { EmbedBuilder } = require("discord.js");
 const database = require("../../database/ticket");
 
 module.exports = {

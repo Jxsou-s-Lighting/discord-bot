@@ -13,12 +13,12 @@ module.exports = {
         .setDescription("Returns the order embed.")
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
     async execute(interaction, client) {
-        let channel = interaction.guild.channels.cache.get("1002067643672580117");
+        let channel = interaction.guild.channels.cache.get("989497528892420106");
 
         const embed = new EmbedBuilder()
             .setTitle("Ordering")
             .setDescription(
-                "You can purchase a product via our [Product Hub](https://jxsou.lighting/hub) or via [PayPal](https://paypal.me/jxsoulighting). You can try out our products via our [Testing Place](https://jxsou.lighting/demo)."
+                "You can purchase a product via our [Product Hub](https://jxsou.lighting/hub) or via [PayPal](https://paypal.me/josou10). You can try out our products via our [Testing Place](https://jxsou.lighting/demo)."
             )
             .addFields([
                 {

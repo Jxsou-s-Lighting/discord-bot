@@ -6,7 +6,7 @@ module.exports = {
         .setDescription("Returns the terms embed.")
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
     async execute(interaction, client) {
-        let channel = interaction.guild.channels.cache.get("1002067643672580117");
+        let channel = interaction.guild.channels.cache.get("989499155367989298");
 
         const embed = new EmbedBuilder()
             .setTitle("Terms of Service")

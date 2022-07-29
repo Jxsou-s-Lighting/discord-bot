@@ -3,10 +3,10 @@ const { EmbedBuilder } = require("discord.js");
 module.exports = {
     name: "messageCreate",
     async execute(message) {
-        let suggestionChannel = message.guild.channels.cache.get("1002117415972380744");
+        let suggestionChannel = message.guild.channels.cache.get("989493730660720700");
 
         if (message.author.bot) return;
-        if (message.member.roles.cache.has("1002117534209802290")) return;
+        if (message.member.roles.cache.has("989444489942827058")) return;
 
         if (message.channel.id == suggestionChannel) {
             const suggestionMessage = await suggestionChannel.send({
@@ -22,8 +22,8 @@ module.exports = {
                 ],
             });
 
-            await suggestionMessage.react("<:Union1_nmap:1002120921261297754>");
-            await suggestionMessage.react("<:Untitled:1002120903305482331>");
+            await suggestionMessage.react("<:CheckMark:989487792994254879>");
+            await suggestionMessage.react("<:WrongMark:989487827987333170>");
             await message.delete();
         }
     },

@@ -3,10 +3,10 @@ module.exports = {
     async execute(interaction) {
         const { member, customId } = interaction;
 
-        let GiveawaysRole = "1002117475032371231";
-        let DevelopmentRole = "1002117505818566666";
-        let OutagesRole = "1002117515784233040";
-        let EventsRole = "1002117525041061979";
+        let GiveawaysRole = "989487073310421092";
+        let DevelopmentRole = "989486785254002759";
+        let OutagesRole = "989486845018656780";
+        let EventsRole = "989485877954772992";
 
         if (["1", "2", "3", "4"].includes(customId)) {
             switch (customId) {
