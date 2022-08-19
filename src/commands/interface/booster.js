@@ -14,9 +14,7 @@ module.exports = {
                 iconURL: client.user.displayAvatarURL(),
             })
             .setTitle("Booster Perks")
-            .setDescription(
-                "All of the rewards that you will get when boosting are listed below."
-            )
+            .setDescription("All of the rewards that you will get when boosting are listed below.")
             .setImage("https://i.postimg.cc/vHZKFTzJ/jxperks.png")
             .setFooter({
                 text: "Note: all of these perks are not going to be revoked if your boost expires.",

@@ -42,9 +42,7 @@ module.exports = {
                 .setLabel("Roblox Group")
                 .setStyle(ButtonStyle.Link),
             new ButtonBuilder()
-                .setURL(
-                    "https://discord.com/channels/885392997162823681/989497510341005373"
-                )
+                .setURL("https://discord.com/channels/885392997162823681/989497510341005373")
                 .setLabel("Support")
                 .setStyle(ButtonStyle.Link),
             new ButtonBuilder()
