@@ -6,6 +6,7 @@ module.exports = {
         let suggestionChannel = message.guild.channels.cache.get("989493730660720700");
 
         if (message.author.bot) return;
+        if (message.content.length === 0) return;
         if (message.member.roles.cache.has("989444489942827058")) return;
 
         if (message.channel.id == suggestionChannel) {
