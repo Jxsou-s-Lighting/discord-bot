@@ -25,7 +25,7 @@ module.exports = {
                 name: "Jxsou's Lighting | Roles System",
                 iconURL: client.user.displayAvatarURL(),
             })
-            .setDescription(`Successfully added the **${product}** role.`)
+            .setDescription(`Successfully added ${product}.`)
             .setTimestamp(Date.now());
 
         await interaction.reply({
