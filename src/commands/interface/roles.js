@@ -21,7 +21,7 @@ module.exports = {
         iconURL: client.user.displayAvatarURL(),
       })
       .setDescription(
-        "> 1 - Giveaways Announcements\n> 2 - Development Announcements\n> 3 - Outages Announcements\n> 4 - Events Announcements"
+        "Although everyone gets pinged for important announcements, you can select all of the roles that you want to get notified about other things that not everyone may want to be pinged about.\n\n> 1 - Giveaways Announcements\n> 2 - Development Announcements\n> 3 - Outages Announcements\n> 4 - Events Announcements"
       )
       .setImage("https://i.postimg.cc/yxQvYhPw/jxroles.png");
 
