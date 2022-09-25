@@ -92,14 +92,27 @@ module.exports = {
         iconURL: client.user.displayAvatarURL(),
         text: "Price: 200 Robux | $2.50 USD",
       });
+    const jdc1Embed = new EmbedBuilder()
+      .setTitle("Product | JDC1")
+      .addFields({
+        name: "Description",
+        value:
+          "The JDC1 contains a traditional single tube element with an incredible clear, bright white output with a surrounding full face of RGB power.",
+      })
+      .setImage("https://i.postimg.cc/MTgSMvp8/jdc1s.png")
+      .setFooter({
+        iconURL: client.user.displayAvatarURL(),
+        text: "Price: 175 Robux | $2.25 USD",
+      });
 
     await channel.send({
       embeds: [
-        magicPanelsEmbed,
         ledCubesEmbed,
         saiLightEmbed,
+        magicPanelsEmbed,
         washesEmbed,
         strobesEmbed,
+        jdc1Embed,
         blindersEmbed,
         ledBarsEmbed,
       ],
