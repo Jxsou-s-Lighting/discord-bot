@@ -18,7 +18,6 @@ module.exports = {
 
     let CategoryID = "989499794990960680";
     let EveryoneID = "885392997162823681";
-    let StaffID = "989445012997673000";
 
     if (["product", "ordering", "question"].includes(customId)) {
       const ID = Math.floor(Math.random() * 9000) + 1000;
@@ -31,14 +30,6 @@ module.exports = {
           permissionOverwrites: [
             {
               id: member.id,
-              allow: [
-                PermissionsBitField.Flags.SendMessages,
-                PermissionsBitField.Flags.ViewChannel,
-                PermissionsBitField.Flags.ReadMessageHistory,
-              ],
-            },
-            {
-              id: StaffID,
               allow: [
                 PermissionsBitField.Flags.SendMessages,
                 PermissionsBitField.Flags.ViewChannel,

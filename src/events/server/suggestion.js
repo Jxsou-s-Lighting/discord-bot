@@ -7,7 +7,7 @@ module.exports = {
 
     if (message.author.bot) return;
     if (message.content.length === 0) return;
-    if (message.member.roles.cache.has("989444489942827058")) return;
+    if (message.member.roles.cache.has("989436080073891860")) return;
 
     if (message.channel.id == suggestionChannel) {
       const suggestionMessage = await suggestionChannel.send({

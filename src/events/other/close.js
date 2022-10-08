@@ -9,8 +9,6 @@ module.exports = {
 
     const { guild, channel, customId, member } = interaction;
 
-    let StaffID = "989445012997673000";
-
     if (["close"].includes(customId)) {
       database.findOne({ ChannelID: channel.id }, async (err, docs) => {
         if (!docs)
@@ -47,7 +45,6 @@ module.exports = {
         });
 
         channel.permissionOverwrites.edit(memberId.id, { ViewChannel: false });
-        channel.permissionOverwrites.edit(StaffID, { ViewChannel: false });
       });
     }
   },
