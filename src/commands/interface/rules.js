@@ -22,7 +22,7 @@ module.exports = {
     const rulesEmbed = new EmbedBuilder()
       .setTitle("Rules")
       .setDescription(
-        "Please read these rules and check on them occasionally as they may change with or without notice. Keep in mind that these are just general rules so please make sure to also use common sense.\n\n**1. General Rules**\n1. You must follow Discord's [Terms of Service](https://discord.com/terms).\n2. Be respectful to everyone.\n3. Do not spam or raid.\n4. Do not send any malicious links or files.\n5. Do not DMs advertising.\n6. Do not send NSFW content anywhere in our server.\n7. Swearing is allowed but keep it to a minimum.\n8. Do not ping staff to check or answer your ticket.\n9. Do not create tickets to spam or ask non-sense questions."
+        "Please read these rules and check on them occasionally as they may change with or without notice. Keep in mind that these are just general rules so please make sure to also use common sense.\n\n**1. General Rules**\n1. You must follow Discord's [Terms of Service](https://discord.com/terms).\n2. Be respectful to everyone.\n3. Do not spam or raid.\n4. Do not send any malicious links or files.\n5. Do not DMs advertising.\n6. Do not send NSFW content anywhere in our server.\n7. Swearing is allowed but keep it to a minimum.\n8. Do not speak any language other than English.\n9. Do not ping staff to check or answer your ticket."
       )
       .setImage("https://i.postimg.cc/PrSBPYJf/jxrules.png")
       .setFooter({
