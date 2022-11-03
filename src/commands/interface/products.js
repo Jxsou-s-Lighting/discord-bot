@@ -15,7 +15,7 @@ module.exports = {
         value:
           "The GLP Impression X4 Bar 20 is a powerful light that provides multiple lighting effects. The LED Bar has 20 LEDs, multiple types of colors, adjustable beam length and is able to tilt.",
       })
-      .setImage("https://i.postimg.cc/RVFLvqkG/ledbars.png")
+      .setImage("https://i.postimg.cc/MTv0S3zS/led-bars.png")
       .setFooter({
         iconURL: client.user.displayAvatarURL(),
         text: "Price: 150 Robux | $2.00 USD",
