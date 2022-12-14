@@ -20,9 +20,7 @@ module.exports = {
         name: "Jxsou's Lighting | Support System",
         iconURL: client.user.displayAvatarURL(),
       })
-      .setDescription(
-        "Any questions or issues regarding our products? Select one of the following categories below."
-      )
+      .setDescription("Any questions or issues regarding our products? Select one of the following categories below.")
       .addFields([
         {
           name: "What do I do after opening a ticket?",
@@ -36,18 +34,9 @@ module.exports = {
       });
 
     const row = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setCustomId("product")
-        .setLabel("General Support")
-        .setStyle(ButtonStyle.Secondary),
-      new ButtonBuilder()
-        .setCustomId("ordering")
-        .setLabel("Product Ordering")
-        .setStyle(ButtonStyle.Secondary),
-      new ButtonBuilder()
-        .setCustomId("question")
-        .setLabel("General Questions")
-        .setStyle(ButtonStyle.Secondary)
+      new ButtonBuilder().setCustomId("product").setLabel("General Support").setStyle(ButtonStyle.Secondary),
+      new ButtonBuilder().setCustomId("ordering").setLabel("Product Ordering").setStyle(ButtonStyle.Secondary),
+      new ButtonBuilder().setCustomId("question").setLabel("General Questions").setStyle(ButtonStyle.Secondary)
     );
 
     await channel.send({

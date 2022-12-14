@@ -11,11 +11,9 @@ module.exports = {
     const nativeEmbed = new EmbedBuilder()
       .setURL("https://native.lighting")
       .setTitle("Partner | Native Lighting")
-      .setDescription(
-        "**Server Owner**: <@283399729776164864>\n**Invite**: https://discord.gg/native"
-      )
-      .setThumbnail("https://i.postimg.cc/7ZZcmqFk/36d8aba4a6567886b2203565a81bf676.png")
-      .setImage("https://i.postimg.cc/5ttPqpFN/native.png")
+      .setDescription("**Server Owner**: <@283399729776164864>\n**Invite**: https://discord.gg/native")
+      .setThumbnail("https://i.postimg.cc/mr62w6PR/Png-3.png")
+      .setImage("https://i.postimg.cc/fyYzMzBT/image-goes-here.png")
       .setFooter({
         text: "discord.gg/native - https://native.lighting",
       });
