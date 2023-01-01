@@ -1,0 +1,38 @@
+{
+  "ids": {
+    "channels": {
+      "suggestionsID": "989493730660720700",
+      "welcomeID": "989484630795239454",
+      "boosterID": "989484691130298428",
+      "rolesID": "989484498796302336",
+      "partnersID": "1032055037762994270",
+      "orderID": "989497528892420106",
+      "productsID": "989497487859531826",
+      "supportID": "989497510341005373",
+      "rulesID": "989470133728731166",
+      "termsID": "989499155367989298",
+      "transcriptsID": "989499848338325514",
+      "verificationID": "1057863703472644168"
+    },
+    "roles": {
+      "giveawaysID": "989487073310421092",
+      "developmentID": "989486785254002759",
+      "outagesID": "989486845018656780",
+      "eventsID": "989485877954772992",
+      "staffID": "1057445774805454869",
+      "memberID": "989437129618759681",
+      "unverifiedID": "1057868577660747877"
+    },
+    "other": {
+      "clientID": "1057455559558840493",
+      "guildID": "885392997162823681",
+      "ticketID": "989499794990960680",
+      "everyoneID": "885392997162823681"
+    },
+    "links": {
+      "supportLink": "https://discord.com/channels/885392997162823681/989497510341005373",
+      "rulesLink": "https://discord.com/channels/885392997162823681/989470133728731166",
+      "productLink": "https://discord.com/channels/885392997162823681/989497487859531826"
+    }
+  }
+}

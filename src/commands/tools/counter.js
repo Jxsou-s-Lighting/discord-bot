@@ -11,7 +11,7 @@ module.exports = {
         iconURL: client.user.displayAvatarURL(),
       })
       .addFields({
-        name: "Members",
+        name: "Users",
         value: `${interaction.guild.memberCount}`,
       })
       .setTimestamp(Date.now());

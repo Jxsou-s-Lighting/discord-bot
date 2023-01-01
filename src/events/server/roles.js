@@ -1,82 +1,78 @@
+const { ids } = require("../../../config.json");
+
 module.exports = {
   name: "interactionCreate",
   async execute(interaction) {
     const { member, customId } = interaction;
-
-    let GiveawaysRole = "989487073310421092";
-    let DevelopmentRole = "989486785254002759";
-    let OutagesRole = "989486845018656780";
-    let EventsRole = "989485877954772992";
-
     if (["1", "2", "3", "4"].includes(customId)) {
       switch (customId) {
         case "1":
-          if (member.roles.cache.has(`${GiveawaysRole}`))
+          if (member.roles.cache.has(ids.roles.giveawaysID))
             return (
               interaction.reply({
-                content: "Giveaways has been removed.",
+                content: `<@&${ids.roles.giveawaysID}> has been removed.`,
                 ephemeral: true,
               }),
-              member.roles.remove(`${GiveawaysRole}`)
+              member.roles.remove(ids.roles.giveawaysID)
             );
-          if (!member.roles.cache.has(`${GiveawaysRole}`))
+          if (!member.roles.cache.has(ids.roles.giveawaysID))
             return (
               interaction.reply({
-                content: "Giveaways has been added.",
+                content: `<@&${ids.roles.giveawaysID}> has been added.`,
                 ephemeral: true,
               }),
-              member.roles.add(`${GiveawaysRole}`)
+              member.roles.add(ids.roles.giveawaysID)
             );
         case "2":
-          if (member.roles.cache.has(`${DevelopmentRole}`))
+          if (member.roles.cache.has(ids.roles.developmentID))
             return (
               interaction.reply({
-                content: "Development has been removed.",
+                content: `<@&${ids.roles.developmentID}> has been removed.`,
                 ephemeral: true,
               }),
-              member.roles.remove(`${DevelopmentRole}`)
+              member.roles.remove(ids.roles.developmentID)
             );
-          if (!member.roles.cache.has(`${DevelopmentRole}`))
+          if (!member.roles.cache.has(ids.roles.developmentID))
             return (
               interaction.reply({
-                content: "Development has been added.",
+                content: `<@&${ids.roles.developmentID}> has been added.`,
                 ephemeral: true,
               }),
-              member.roles.add(`${DevelopmentRole}`)
+              member.roles.add(ids.roles.developmentID)
             );
         case "3":
-          if (member.roles.cache.has(`${OutagesRole}`))
+          if (member.roles.cache.has(ids.roles.outagesID))
             return (
               interaction.reply({
-                content: "Outages has been removed.",
+                content: `<@&${ids.roles.outagesID}> has been removed.`,
                 ephemeral: true,
               }),
-              member.roles.remove(`${OutagesRole}`)
+              member.roles.remove(ids.roles.outagesID)
             );
-          if (!member.roles.cache.has(`${OutagesRole}`))
+          if (!member.roles.cache.has(ids.roles.outagesID))
             return (
               interaction.reply({
-                content: "Outages has been added.",
+                content: `<@&${ids.roles.outagesID}> has been added.`,
                 ephemeral: true,
               }),
-              member.roles.add(`${OutagesRole}`)
+              member.roles.add(ids.roles.outagesID)
             );
         case "4":
-          if (member.roles.cache.has(`${EventsRole}`))
+          if (member.roles.cache.has(ids.roles.eventsID))
             return (
               interaction.reply({
-                content: "Events has been removed.",
+                content: `<@&${ids.roles.eventsID}> has been removed.`,
                 ephemeral: true,
               }),
-              member.roles.remove(`${EventsRole}`)
+              member.roles.remove(ids.roles.eventsID)
             );
-          if (!member.roles.cache.has(`${EventsRole}`))
+          if (!member.roles.cache.has(ids.roles.eventsID))
             return (
               interaction.reply({
-                content: "Events has been added.",
+                content: `<@&${ids.roles.eventsID}> has been added.`,
                 ephemeral: true,
               }),
-              member.roles.add(`${EventsRole}`)
+              member.roles.add(ids.roles.eventsID)
             );
       }
     }

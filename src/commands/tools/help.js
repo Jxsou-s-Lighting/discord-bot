@@ -7,12 +7,12 @@ module.exports = {
   async execute(interaction, client) {
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "Jxsou's Lighting | Commands",
+        name: "Jxsou's Lighting | Help",
         iconURL: client.user.displayAvatarURL(),
       })
       .addFields({
         name: "General Commands",
-        value: "/help\n/hub\n/ping\n/test\n/paypal\n/membercount",
+        value: "/help\n/hub\n/ping\n/demo\n/paypal\n/membercount",
       })
       .setTimestamp(Date.now());
     await interaction.reply({

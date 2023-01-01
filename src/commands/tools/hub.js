@@ -14,12 +14,12 @@ module.exports = {
         name: "Jxsou's Lighting | Product Hub",
         iconURL: client.user.displayAvatarURL(),
       })
-      .setDescription("Click the button below to purchase our lights from our product hub.")
+      .setDescription("Click the button below to purchase our products.")
       .setTimestamp(Date.now());
 
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
-        .setURL("https://dev.jxsou.lighting/store")
+        .setURL("https://jxsou.lighting/hub")
         .setLabel("Product Hub")
         .setStyle(ButtonStyle.Link)
     );

@@ -1,1 +1,1 @@
-dont use the code lmao
+Copyright © Jxsou's Lighting

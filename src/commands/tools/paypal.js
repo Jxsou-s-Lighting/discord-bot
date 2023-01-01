@@ -6,6 +6,8 @@ const {
   ButtonStyle,
 } = require("discord.js");
 
+const { ids } = require("../../../config.json");
+
 module.exports = {
   data: new SlashCommandBuilder().setName("paypal").setDescription("Returns the PayPal link."),
   async execute(interaction, client) {
@@ -14,11 +16,7 @@ module.exports = {
         name: "Jxsou's Lighting | PayPal",
         iconURL: client.user.displayAvatarURL(),
       })
-      .setDescription(
-        `Click the button below to purchase our lights with your currency. Please open an ordering ticket at ${interaction.guild.channels.cache.get(
-          "1002067643672580117"
-        )} after purchasing.`
-      )
+      .setDescription(`Please open an [ordering ticket](${ids.links.supportLink}) before purchasing.`)
       .setTimestamp(Date.now());
 
     const row = new ActionRowBuilder().addComponents(

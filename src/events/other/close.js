@@ -1,6 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-
-const database = require("../../database/ticket");
+const database = require("../../functions/database/ticket");
+const { ids } = require("../../../config.json");
 
 module.exports = {
   name: "interactionCreate",
@@ -27,6 +27,7 @@ module.exports = {
         await database.updateOne({ ChannelID: channel.id }, { Closed: true });
 
         const memberId = guild.members.cache.get(docs.MemberID);
+        let StaffID = ids.roles.staffID;
 
         await interaction.reply({
           embeds: [
@@ -45,6 +46,7 @@ module.exports = {
         });
 
         channel.permissionOverwrites.edit(memberId.id, { ViewChannel: false });
+        channel.permissionOverwrites.edit(StaffID, { ViewChannel: false });
       });
     }
   },
