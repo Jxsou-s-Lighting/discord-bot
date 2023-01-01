@@ -21,8 +21,8 @@ module.exports = {
         ],
       });
 
-      await suggestionMessage.react("<:Union1_nmap:1002120921261297754>");
-      await suggestionMessage.react("<:Untitled:1002120903305482331>");
+      await suggestionMessage.react("<:CheckMark:989487792994254879>");
+      await suggestionMessage.react("<:WrongMark:989487827987333170>");
 
       await message.delete();
     }

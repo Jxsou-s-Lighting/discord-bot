@@ -12,49 +12,49 @@ module.exports = {
     const ledCubesEmbed = new EmbedBuilder()
       .setTitle("Product | LED Cubes")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 50 Robux | <:paypal:1057157963128778752> $0.75 USD"
+        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD"
       )
       .setImage("https://i.postimg.cc/025xJY72/led-cubes.png");
 
     const washesEmbed = new EmbedBuilder()
       .setTitle("Product | Washes")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 200 Robux | <:paypal:1057157963128778752> $2.25 USD"
+        "Price: <:robux:1056105131789258822> 200 Robux | <:paypal:1056105041695621160> $2.25 USD"
       )
       .setImage("https://i.postimg.cc/cHMyvCHn/washes.png");
 
     const strobesEmbed = new EmbedBuilder()
       .setTitle("Product | Strobes")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 100 Robux | <:paypal:1057157963128778752> $1.25 USD"
+        "Price: <:robux:1056105131789258822> 100 Robux | <:paypal:1056105041695621160> $1.25 USD"
       )
       .setImage("https://i.postimg.cc/jqcYKDBV/strobes.png");
 
     const magicPanelsEmbed = new EmbedBuilder()
       .setTitle("Product | Magic Panels")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 175 Robux | <:paypal:1057157963128778752> $2.00 USD"
+        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $2.00 USD"
       )
       .setImage("https://i.postimg.cc/zG61M46V/magic-panels.png");
 
     const blindersEmbed = new EmbedBuilder()
       .setTitle("Product | Blinders")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 75 Robux | <:paypal:1057157963128778752> $1.00 USD"
+        "Price: <:robux:1056105131789258822> 75 Robux | <:paypal:1056105041695621160> $1.00 USD"
       )
       .setImage("https://i.postimg.cc/G3yT51fs/blinders.png");
 
     const jdc1Embed = new EmbedBuilder()
       .setTitle("Product | JDC1")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 175 Robux | <:paypal:1057157963128778752> $2.00 USD"
+        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $2.00 USD"
       )
       .setImage("https://i.postimg.cc/yYWv2274/jdc1.png");
 
     const ledBarsEmbed = new EmbedBuilder()
       .setTitle("Product | LED Bars")
       .setDescription(
-        "Price: <:robux:1057157987430568037> 150 Robux | <:paypal:1057157963128778752> $1.75 USD"
+        "Price: <:robux:1056105131789258822> 150 Robux | <:paypal:1056105041695621160> $1.75 USD"
       )
       .setImage("https://i.postimg.cc/sXk78Hmy/led-bars.png");
 
