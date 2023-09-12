@@ -5,10 +5,10 @@ module.exports = {
   name: "interactionCreate",
   async execute(interaction) {
     if (interaction.customId == "verification") {
-      let channel = interaction.guild.channels.cache.get(ids.channels.welcomeID);
+      let welcomeChannel = interaction.guild.channels.cache.get(ids.channels.welcomeID);
 
-      await interaction.member.roles.remove(ids.roles.unverifiedID);
       await interaction.member.roles.add(ids.roles.memberID);
+      await interaction.member.roles.remove(ids.roles.unverifiedID);
 
       interaction.reply({
         content: "You have been verified.",
@@ -37,7 +37,7 @@ module.exports = {
           .setStyle(ButtonStyle.Link)
       );
 
-      await channel.send({ content: `${interaction.member}`, embeds: [embed], components: [row] });
+      await welcomeChannel.send({ content: `${interaction.member}`, embeds: [embed], components: [row] });
     }
   },
 };

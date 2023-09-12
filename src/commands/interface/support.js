@@ -56,6 +56,7 @@ module.exports = {
       embeds: [embed],
       components: [row],
     });
+
     await interaction.reply({
       content: `Successfully sent the support embed. ${channel}`,
     });
