@@ -58,6 +58,13 @@ module.exports = {
       )
       .setImage("https://i.postimg.cc/sXk78Hmy/led-bars.png");
 
+    const followSpotlightsEmbed = new EmbedBuilder()
+      .setTitle("Product | Follow Spotlights")
+      .setDescription(
+        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD"
+      )
+      .setImage("https://i.postimg.cc/gkC4yB8L/follow-spotlights.png");
+
     await channel.send({
       embeds: [
         ledCubesEmbed,
@@ -67,6 +74,7 @@ module.exports = {
         blindersEmbed,
         jdc1Embed,
         ledBarsEmbed,
+        followSpotlightsEmbed,
       ],
     });
     await interaction.reply({
