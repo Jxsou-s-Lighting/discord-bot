@@ -1,10 +1,4 @@
-const {
-  SlashCommandBuilder,
-  EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle,
-} = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 const { ids } = require("../../../config.json");
 
@@ -16,14 +10,11 @@ module.exports = {
         name: "Jxsou's Lighting | PayPal",
         iconURL: client.user.displayAvatarURL(),
       })
-      .setDescription(`Please open an [ordering ticket](${ids.links.supportLink}) before purchasing.`)
+      .setDescription(`Create an [ordering ticket](${ids.links.supportLink}) before purchasing.`)
       .setTimestamp(Date.now());
 
     const row = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setURL("https://paypal.me/josou10")
-        .setLabel("PayPal Link")
-        .setStyle(ButtonStyle.Link)
+      new ButtonBuilder().setURL("https://paypal.me/josou10").setLabel("PayPal Link").setStyle(ButtonStyle.Link)
     );
 
     await interaction.reply({

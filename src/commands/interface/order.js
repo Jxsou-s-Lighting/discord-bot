@@ -19,36 +19,29 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "Jxsou's Lighting | Ordering",
+        name: "Jxsou's Lighting | Purchasing",
         iconURL: client.user.displayAvatarURL(),
       })
       .setTitle("Purchasing")
       .setDescription(
-        "You can purchase a product via our [Product Hub](https://jxsou.lighting/hub). If you wish to order via [PayPal](https://paypal.me/josou10), create an ordering ticket."
+        "You can purchase our products from our [Product Hub](https://jxsou.lighting/hub). If you wish to order via [PayPal](https://paypal.me/josou10), create an ordering ticket."
       )
       .addFields([
         {
           name: "How do I use the product that I purchased?",
           value:
-            "- Download the file sent by Vendr.\n- Drag and drop the file in Roblox Studio.\n- Follow the instructions inside the product's README file.",
+            "- Download the file sent by Vendr.\n- Drag the file into your game.\n- Follow the instructions in the product's `README` script.",
         },
       ])
-      .setImage("https://i.postimg.cc/fyx47nS0/ordering.png")
+      .setImage("https://i.postimg.cc/TYC2Gdc2/purchasing.png")
       .setFooter({
-        text: "Feel free to contact support if you have any questions about our products.",
+        text: "Feel free to contact support if you have any questions.",
       });
 
     const row = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setURL("https://jxsou.lighting/hub")
-        .setLabel("Product Hub")
-        .setStyle(ButtonStyle.Link),
-      new ButtonBuilder()
-        .setURL("https://jxsou.lighting/roblox")
-        .setLabel("Roblox Group")
-        .setStyle(ButtonStyle.Link),
-      new ButtonBuilder().setURL(ids.links.supportLink).setLabel("Support").setStyle(ButtonStyle.Link),
-      new ButtonBuilder().setURL("https://paypal.me/josou10").setLabel("PayPal").setStyle(ButtonStyle.Link)
+      new ButtonBuilder().setURL("https://jxsou.lighting").setLabel("Website").setStyle(ButtonStyle.Link),
+      new ButtonBuilder().setURL("https://jxsou.lighting/roblox").setLabel("Roblox").setStyle(ButtonStyle.Link),
+      new ButtonBuilder().setURL(ids.links.supportLink).setLabel("Support").setStyle(ButtonStyle.Link)
     );
 
     await channel.send({

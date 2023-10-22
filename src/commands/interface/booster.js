@@ -16,7 +16,7 @@ module.exports = {
       })
       .setTitle("Booster Perks")
       .setDescription("All of the rewards that you will get when boosting are listed below.")
-      .setImage("https://i.postimg.cc/qqYy8sK9/booster-perks.png")
+      .setImage("https://i.postimg.cc/sXv7PHD7/booster-perks.png")
       .setFooter({
         text: "Note: all of these perks are not going to be revoked if your boost expires.",
       });

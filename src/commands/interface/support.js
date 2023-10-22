@@ -19,12 +19,12 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "Jxsou's Lighting | Support System",
+        name: "Jxsou's Lighting | Support",
         iconURL: client.user.displayAvatarURL(),
       })
       .setTitle("Support")
       .setDescription(
-        "Any questions or issues regarding our products? Open a ticket and we will try to help you."
+        "If you have any inquiries or issues related to our products, open a ticket and we will assist you shortly."
       )
       .addFields([
         {
@@ -32,24 +32,15 @@ module.exports = {
           value: `- Make sure to use the provided format.\n- Include as much information as possible.\n- Follow our [Tickets Rules](${ids.links.rulesLink}).`,
         },
       ])
-      .setImage("https://i.postimg.cc/PJQPwvtG/support.png")
+      .setImage("https://i.postimg.cc/zDCjpBCf/support.png")
       .setFooter({
         text: "Tickets will be closed after 24h of inactivity.",
       });
 
     const row = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setCustomId("support")
-        .setLabel("General Support")
-        .setStyle(ButtonStyle.Secondary),
-      new ButtonBuilder()
-        .setCustomId("ordering")
-        .setLabel("Product Ordering")
-        .setStyle(ButtonStyle.Secondary),
-      new ButtonBuilder()
-        .setCustomId("question")
-        .setLabel("General Questions")
-        .setStyle(ButtonStyle.Secondary)
+      new ButtonBuilder().setCustomId("support").setLabel("General Support").setStyle(ButtonStyle.Secondary),
+      new ButtonBuilder().setCustomId("ordering").setLabel("Product Ordering").setStyle(ButtonStyle.Secondary),
+      new ButtonBuilder().setCustomId("question").setLabel("General Questions").setStyle(ButtonStyle.Secondary)
     );
 
     await channel.send({

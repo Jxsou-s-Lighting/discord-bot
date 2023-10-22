@@ -19,29 +19,29 @@ module.exports = {
 
     const embed = new EmbedBuilder()
       .setAuthor({
-        name: "Jxsou's Lighting | Roles System",
+        name: "Jxsou's Lighting | Roles",
         iconURL: client.user.displayAvatarURL(),
       })
       .setDescription("You can select the role(s) that you want to be notified about.")
       .addFields(
         {
-          name: "1 - Giveaway Announcements",
+          name: "1  •  Giveaway Announcements",
           value: "Be notified about giveaways that we host sometimes.",
         },
         {
-          name: "2 - Development Announcements",
+          name: "2  •  Development Announcements",
           value: "Be notified about development of upcoming products.",
         },
         {
-          name: "3 - Outage Announcements",
+          name: "3  •  Outage Announcements",
           value: "Be notified about ongoing outages of our services.",
         },
         {
-          name: "4 - Event Announcements",
+          name: "4  •  Event Announcements",
           value: "Be notified about events that we or our partners host.",
         }
       )
-      .setImage("https://i.postimg.cc/xTzs5Sx8/roles.png");
+      .setImage("https://i.postimg.cc/8z3BsVbM/roles.png");
 
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder().setCustomId("1").setLabel("1").setStyle(ButtonStyle.Secondary),

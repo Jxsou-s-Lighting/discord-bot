@@ -10,66 +10,58 @@ module.exports = {
     let channel = interaction.guild.channels.cache.get(ids.channels.productsID);
 
     const ledCubesEmbed = new EmbedBuilder()
-      .setTitle("Product | LED Cubes")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD"
-      )
-      .setImage("https://i.postimg.cc/025xJY72/led-cubes.png");
-
-    const washesEmbed = new EmbedBuilder()
-      .setTitle("Product | Washes")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 200 Robux | <:paypal:1056105041695621160> $2.25 USD"
-      )
-      .setImage("https://i.postimg.cc/cHMyvCHn/washes.png");
+      .setColor(0x2b2d31)
+      .setTitle("LED Cubes")
+      .setDescription("Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD")
+      .setImage("https://i.postimg.cc/DywQ7cX9/led-cubes.png");
 
     const strobesEmbed = new EmbedBuilder()
-      .setTitle("Product | Strobes")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 100 Robux | <:paypal:1056105041695621160> $1.25 USD"
-      )
-      .setImage("https://i.postimg.cc/jqcYKDBV/strobes.png");
+      .setColor(0x2b2d31)
+      .setTitle("Strobes")
+      .setDescription("Price: <:robux:1056105131789258822> 100 Robux | <:paypal:1056105041695621160> $1.25 USD")
+      .setImage("https://i.postimg.cc/PxHZ9bHF/strobes.png");
+
+    const washesEmbed = new EmbedBuilder()
+      .setColor(0x2b2d31)
+      .setTitle("Washes")
+      .setDescription("Price: <:robux:1056105131789258822> 200 Robux | <:paypal:1056105041695621160> $2.50 USD")
+      .setImage("https://i.postimg.cc/76N7kCYP/washes.png");
 
     const magicPanelsEmbed = new EmbedBuilder()
-      .setTitle("Product | Magic Panels")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $2.00 USD"
-      )
-      .setImage("https://i.postimg.cc/zG61M46V/magic-panels.png");
+      .setColor(0x2b2d31)
+      .setTitle("Magic Panels")
+      .setDescription("Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $2.25 USD")
+      .setImage("https://i.postimg.cc/52HwCNpp/magic-panels.png");
 
     const blindersEmbed = new EmbedBuilder()
-      .setTitle("Product | Blinders")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 75 Robux | <:paypal:1056105041695621160> $1.00 USD"
-      )
-      .setImage("https://i.postimg.cc/G3yT51fs/blinders.png");
+      .setColor(0x2b2d31)
+      .setTitle("Blinders")
+      .setDescription("Price: <:robux:1056105131789258822> 75 Robux | <:paypal:1056105041695621160> $1.00 USD")
+      .setImage("https://i.postimg.cc/tTGtyQ3k/blinders.png");
 
     const jdc1Embed = new EmbedBuilder()
-      .setTitle("Product | JDC1")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $2.00 USD"
-      )
-      .setImage("https://i.postimg.cc/yYWv2274/jdc1.png");
+      .setColor(0x2b2d31)
+      .setTitle("JDC1")
+      .setDescription("Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $2.25 USD")
+      .setImage("https://i.postimg.cc/HnpwcwP7/jdc1.png");
 
     const ledBarsEmbed = new EmbedBuilder()
-      .setTitle("Product | LED Bars")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 150 Robux | <:paypal:1056105041695621160> $1.75 USD"
-      )
-      .setImage("https://i.postimg.cc/sXk78Hmy/led-bars.png");
+      .setColor(0x2b2d31)
+      .setTitle("LED Bars")
+      .setDescription("Price: <:robux:1056105131789258822> 150 Robux | <:paypal:1056105041695621160> $2.00 USD")
+      .setImage("https://i.postimg.cc/RhXccWjp/led-bars.png");
 
     const followSpotlightsEmbed = new EmbedBuilder()
-      .setTitle("Product | Follow Spotlights")
-      .setDescription(
-        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD"
-      )
-      .setImage("https://i.postimg.cc/gkC4yB8L/follow-spotlights.png");
+      .setColor(0x2b2d31)
+      .setTitle("Follow Spotlights")
+      .setDescription("Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD")
+      .setImage("https://i.postimg.cc/W3mm1WSv/follow-spotlights.png");
 
     await channel.send({
       embeds: [
         ledCubesEmbed,
-        washesEmbed,
         strobesEmbed,
+        washesEmbed,
         magicPanelsEmbed,
         blindersEmbed,
         jdc1Embed,

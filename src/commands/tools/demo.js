@@ -1,10 +1,4 @@
-const {
-  SlashCommandBuilder,
-  EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle,
-} = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder().setName("demo").setDescription("Returns the testing place link."),
@@ -18,10 +12,7 @@ module.exports = {
       .setTimestamp(Date.now());
 
     const row = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setURL("https://jxsou.lighting/demo")
-        .setLabel("Testing Place")
-        .setStyle(ButtonStyle.Link)
+      new ButtonBuilder().setURL("https://jxsou.lighting/demo").setLabel("Testing Place").setStyle(ButtonStyle.Link)
     );
 
     await interaction.reply({
