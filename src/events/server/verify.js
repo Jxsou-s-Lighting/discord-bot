@@ -1,10 +1,18 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 const { ids } = require("../../../config.json");
 
+const verifiedUsers = new Set();
+
 module.exports = {
   name: "interactionCreate",
   async execute(interaction) {
-    if (interaction.customId == "verification") {
+    if (interaction.customId === "verification") {
+      if (verifiedUsers.has(interaction.user.id)) {
+        return;
+      }
+
+      verifiedUsers.add(interaction.user.id);
+
       await interaction.member.roles.add(ids.roles.memberID);
       await interaction.member.roles.remove(ids.roles.unverifiedID);
 

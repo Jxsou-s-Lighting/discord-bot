@@ -55,7 +55,7 @@ module.exports = {
       .setColor(0x2b2d31)
       .setTitle("Follow Spotlights")
       .setDescription("Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.75 USD")
-      .setImage("https://i.postimg.cc/W3mm1WSv/follow-spotlights.png");
+      .setImage("https://i.postimg.cc/T16nmn16/follow-spotlights.png");
 
     await channel.send({
       embeds: [
