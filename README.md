@@ -1,1 +1,1 @@
-Copyright © Jxsou's Lighting. All Rights Reserved.
+Copyright © Jxsou's Lighting • All Rights Reserved

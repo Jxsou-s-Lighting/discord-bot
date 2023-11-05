@@ -47,7 +47,7 @@ module.exports = {
     const termsEmbed = new EmbedBuilder()
       .setTitle("Terms of Service")
       .setDescription(
-        "Please read these Terms of Service before purchasing and/or using any of our products and check on them occasionally as they may change with or without notice.\n\n**1. Product Terms**\n1. Refunds will not be given in accordance with Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use).\n2. We have full rights to revoke access to a product at any time if you remove credits.\n3. You are only allowed to transfer your product license once.\n4. You are not allowed to modify any of our products.\n5. You may not distribute our products to other people. Leaking our products will result in a blacklist from Jxsou's Lighting."
+        "Make sure to review our terms of service before purchasing and/or using any of our products and check them occasionally as they may change with or without notice.\n\n**1. Product Terms**1.1 Refunds will not be given in accordance with Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use).\n1.2 We have full rights to revoke access to a product at any time if you remove credits.\n1.3 You are only allowed to transfer your product license once.\n1.4 You are not allowed to modify any of our products.\n1.5 You may not distribute our products to other people. Leaking our products will result in a blacklist from Jxsou's Lighting."
       )
       .setImage("https://i.postimg.cc/T2z9JbLF/terms-of-service.png")
       .setFooter({
