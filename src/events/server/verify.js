@@ -2,11 +2,19 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("
 const { ids } = require("../../../config.json");
 
 const verifiedUsers = new Set();
+const welcomedInteractions = new Set();
 
 module.exports = {
   name: "interactionCreate",
   async execute(interaction) {
     if (interaction.customId === "verification") {
+      // Check if the interaction has already been welcomed
+      if (welcomedInteractions.has(interaction.id)) {
+        return;
+      }
+
+      welcomedInteractions.add(interaction.id);
+
       if (verifiedUsers.has(interaction.user.id)) {
         return;
       }

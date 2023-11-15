@@ -1,51 +1,43 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
+const {
+  SlashCommandBuilder,
+  EmbedBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+  PermissionFlagsBits,
+} = require("discord.js");
+
 const { ids } = require("../../../config.json");
 
-const verifiedUsers = new Set();
-const welcomeSent = new Set();
-
 module.exports = {
-  name: "interactionCreate",
-  async execute(interaction) {
-    if (interaction.customId === "verification") {
-      if (verifiedUsers.has(interaction.user.id)) {
-        return;
-      }
+  data: new SlashCommandBuilder()
+    .setName("verification")
+    .setDescription("Returns the verification embed.")
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+  async execute(interaction, client) {
+    let channel = interaction.guild.channels.cache.get(ids.channels.verificationID);
 
-      verifiedUsers.add(interaction.user.id);
+    const embed = new EmbedBuilder()
+      .setColor(0x2b2d31)
+      .setAuthor({
+        name: "Jxsou's Lighting | Verification",
+        iconURL: client.user.displayAvatarURL(),
+      })
+      .setDescription("Please complete the `CAPTCHA` below to gain access to the server.")
+      .setImage("https://i.postimg.cc/fLj97VGn/verification.png");
 
-      await interaction.member.roles.add(ids.roles.memberID);
-      await interaction.member.roles.remove(ids.roles.unverifiedID);
+    const row = new ActionRowBuilder().addComponents(
+      new ButtonBuilder().setCustomId("verification").setLabel("I'm not a robot").setStyle(ButtonStyle.Primary)
+    );
 
-      interaction.reply({
-        content: "You have been verified.",
-        ephemeral: true,
-      });
-
-      if (welcomeSent.has(interaction.user.id)) {
-        return;
-      }
-
-      welcomeSent.add(interaction.user.id);
-
-      const embed = new EmbedBuilder()
-        .setAuthor({
-          name: `${interaction.member.user.tag}`,
-          iconURL: `${interaction.member.user.displayAvatarURL({ forceStatic: false })}`,
-        })
-        .setTitle("Welcome to Jxsou's Lighting!")
-        .setDescription(
-          `Please check out our [Rules and Info](${ids.links.rulesLink}) as well as our [Product List](${ids.links.productLink}).`
-        )
-        .setImage("https://i.postimg.cc/T3X5sYQk/welcome.png");
-
-      const row = new ActionRowBuilder().addComponents(
-        new ButtonBuilder().setURL("https://jxsou.lighting/roblox").setLabel("Roblox Group").setStyle(ButtonStyle.Link),
-        new ButtonBuilder().setURL("https://jxsou.lighting/hub").setLabel("Product Hub").setStyle(ButtonStyle.Link)
-      );
-
-      let welcomeChannel = interaction.guild.channels.cache.get(ids.channels.welcomeID);
-      welcomeChannel.send({ content: `${interaction.member}`, embeds: [embed], components: [row] });
-    }
+    await channel.send({
+      embeds: [embed],
+    });
+    await channel.send({
+      components: [row],
+    });
+    await interaction.reply({
+      content: `Successfully sent the verification embed. ${channel}`,
+    });
   },
 };
