@@ -36,7 +36,7 @@ module.exports = {
     const rulesEmbed = new EmbedBuilder()
       .setTitle("Rules")
       .setDescription(
-        "Please read these rules and check on them occasionally as they may change with or without notice. Keep in mind that these are just general rules so please make sure to also use common sense.\n\n**1. General Rules**\n1. You must follow Discord's [Terms of Service](https://discord.com/terms).\n2. Be respectful to everyone.\n3. DMs advertising is forbidden.\n4. Do not send any suspicious links or files.\n5. NSFW content is forbidden.\n6. Swearing is allowed but keep it to a minimum.\n7. English language only.\n8. Do not ping staff to check your ticket."
+        "Please read these rules and check on them occasionally as they may change with or without notice. Keep in mind that these are just general rules so please make sure to also use common sense.\n\n**1. General Rules**1.1 You must follow Discord's [Terms of Service](https://discord.com/terms).\n1.2 Be respectful to everyone.\n1.3 DMs advertising is forbidden.\n1.4 Do not send any suspicious links or files.\n1.5 NSFW content is forbidden.\n1.6 Swearing is allowed but keep it to a minimum.\n1.7 English language only.\n1.8 Do not ping staff to check your ticket."
       )
       .setImage("https://i.postimg.cc/1tTKTnWg/rules.png")
       .setFooter({
