@@ -26,6 +26,12 @@ module.exports = {
     await suggestionMessage.react("<:CheckMark:989487792994254879>");
     await suggestionMessage.react("<:WrongMark:989487827987333170>");
 
-    await message.delete();
+    setTimeout(async () => {
+      try {
+        await message.delete();
+      } catch (error) {
+        console.error("Error deleting message:", error);
+      }
+    }, 1000);
   },
 };
