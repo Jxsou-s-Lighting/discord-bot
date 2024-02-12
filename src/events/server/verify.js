@@ -1,5 +1,5 @@
-const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const config = require("../../../config.json");
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder } = require("discord.js");
+const { ids } = require("../../../config.json");
 
 module.exports = {
   name: "interactionCreate",
@@ -8,27 +8,28 @@ module.exports = {
 
     if (interaction.customId === "verification") {
       const member = interaction.member;
+      const guild = interaction.guild;
 
-      const { roles, channels, links } = config.ids;
+      if (member.roles.cache.has(ids.roles.unverifiedID)) {
+        await member.roles.remove(ids.roles.unverifiedID);
+      }
 
-      try {
-        await member.roles.remove(roles.unverifiedID);
+      await member.roles.add(ids.roles.memberID);
 
-        await member.roles.add(roles.memberID);
+      await interaction.reply({ content: "You have been verified.", ephemeral: true });
 
-        const welcomeChannel = await client.channels.fetch(channels.welcomeID);
-
-        const embed = {
-          author: {
-            name: member.user.tag,
-            icon_url: member.user.displayAvatarURL({ dynamic: true }),
-          },
-          title: "Welcome to Jxsou's Lighting!",
-          description: `Please check out our [Rules and Info](${links.rulesLink}) as well as our [Product List](${links.productLink}).`,
-          image: {
-            url: "https://i.postimg.cc/T3X5sYQk/welcome.png",
-          },
-        };
+      const channel = guild.channels.cache.get(ids.channels.welcomeID);
+      if (channel) {
+        const embed = new EmbedBuilder()
+          .setAuthor({
+            name: interaction.user.tag,
+            iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+          })
+          .setTitle("Welcome to Jxsou's Lighting!")
+          .setDescription(
+            `Please check out our [Rules and Info](${ids.links.rulesLink}) as well as our [Product List](${ids.links.productLink}).`
+          )
+          .setImage("https://i.postimg.cc/T3X5sYQk/welcome.png");
 
         const row = new ActionRowBuilder().addComponents(
           new ButtonBuilder()
@@ -38,16 +39,9 @@ module.exports = {
           new ButtonBuilder().setURL("https://jxsou.lighting/hub").setLabel("Product Hub").setStyle(ButtonStyle.Link)
         );
 
-        welcomeChannel.send({
-          embeds: [embed],
-          components: [row],
-          content: `${member}`,
-        });
-
-        interaction.reply({ content: "You have been verified.", ephemeral: true });
-      } catch (error) {
-        console.error("Error during verification:", error);
-        interaction.reply({ content: "Error during verification process.", ephemeral: true });
+        await channel.send({ content: member.toString(), embeds: [embed], components: [row] });
+      } else {
+        console.log("Verification channel not found or not a text channel.");
       }
     }
   },
