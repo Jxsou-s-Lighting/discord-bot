@@ -7,6 +7,8 @@ module.exports = {
     if (!interaction.isButton()) return;
 
     if (interaction.customId === "verification") {
+      await interaction.deferReply({ ephemeral: true });
+
       const member = interaction.member;
       const guild = interaction.guild;
 
@@ -16,7 +18,7 @@ module.exports = {
 
       await member.roles.add(ids.roles.memberID);
 
-      await interaction.reply({ content: "You have been verified.", ephemeral: true });
+      await interaction.editReply({ content: "You have been verified." });
 
       const channel = guild.channels.cache.get(ids.channels.welcomeID);
       if (channel) {
