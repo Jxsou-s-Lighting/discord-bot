@@ -17,16 +17,16 @@ module.exports = {
       )
       .setImage("https://i.postimg.cc/1z93Z8kz/saturn-live.png");
 
-    const xrave = new EmbedBuilder()
-      .setURL("https://discord.gg/pB242dxYzp")
-      .setTitle("X-Rave Productions")
+    const xtreme = new EmbedBuilder()
+      .setURL("https://discord.gg/h8YUqsSMcg")
+      .setTitle("XtremeFX")
       .setDescription(
-        "**Founder**: <@781148506919796767>\nWe love to help out the community by giving back! We offer high end products, free of cost.\n**[Server Link](https://discord.gg/pB242dxYzp)**"
+        "**Founder**: <@886733621417873428>\nWe love to help out the community by giving back! We offer high end products, free of cost.\n**[Server Link](https://discord.gg/h8YUqsSMcg)**"
       )
-      .setImage("https://i.postimg.cc/76hPfpY8/x-raves-productions.png");
+      .setImage("https://i.postimg.cc/8kMDMyPT/xtremefx.png");
 
     await channel.send({
-      embeds: [saturn, xrave],
+      embeds: [saturn, xtreme],
     });
     await interaction.reply({
       content: `Successfully sent the partners embed. ${channel}`,
