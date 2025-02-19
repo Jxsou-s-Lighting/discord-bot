@@ -4,34 +4,34 @@ const { ids } = require("../../../config.json");
 module.exports = {
   name: "messageCreate",
   async execute(message) {
-    if (message.author.bot || message.content.trim() === "") {
+    const suggestionChannelId = ids.channels.suggestionsID;
+    const staffRoleId = ids.roles.staffID;
+
+    if (message.channel.id !== suggestionChannelId) return;
+
+    if (message.author.bot) return;
+
+    if (message.member.roles.cache.has(staffRoleId)) return;
+
+    if (!message.content.trim()) {
+      await message.delete();
       return;
     }
 
-    const suggestionChannel = message.guild.channels.cache.get(ids.channels.suggestionsID);
-    if (message.channel.id !== suggestionChannel.id) {
-      return;
-    }
-
-    const suggestionEmbed = new EmbedBuilder()
+    const embed = new EmbedBuilder()
+      .setColor(0x2b2d31)
       .setAuthor({
-        name: message.member.user.tag,
-        iconURL: message.member.user.displayAvatarURL({ dynamic: true }),
+        name: `${message.author.tag}`,
+        iconURL: message.author.displayAvatarURL({ dynamic: true }),
       })
-      .setDescription(message.content)
+      .setDescription(message.content.trim())
       .setTimestamp();
 
-    const suggestionMessage = await suggestionChannel.send({ embeds: [suggestionEmbed] });
+    const sentMessage = await message.channel.send({ embeds: [embed] });
 
-    await suggestionMessage.react("<:CheckMark:989487792994254879>");
-    await suggestionMessage.react("<:WrongMark:989487827987333170>");
+    await sentMessage.react("<:CheckMark:989487792994254879>");
+    await sentMessage.react("<:WrongMark:989487827987333170>");
 
-    setTimeout(async () => {
-      try {
-        await message.delete();
-      } catch (error) {
-        console.error("Error deleting message:", error);
-      }
-    }, 1000);
+    await message.delete();
   },
 };
