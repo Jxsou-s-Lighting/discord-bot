@@ -4,12 +4,9 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("
 module.exports = {
   name: "guildMemberAdd",
   async execute(member) {
-    const memberRole = member.guild.roles.cache.get(ids.roles.memberID);
     const welcomeChannel = member.guild.channels.cache.get(ids.channels.welcomeID);
 
     try {
-      await member.roles.add(memberRole);
-
       const welcomeEmbed = new EmbedBuilder()
         .setAuthor({
           name: member.user.tag,
@@ -38,7 +35,7 @@ module.exports = {
         components: [actionRow],
       });
     } catch (error) {
-      console.error(`Failed to assign the unverified role to ${member.user.tag}:`, error);
+      console.error(`Failed to send welcome embed from member: ${member.user.tag}:`, error);
     }
   },
 };
