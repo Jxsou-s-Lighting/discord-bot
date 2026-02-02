@@ -13,73 +13,89 @@ module.exports = {
       .setColor(0x2b2d31)
       .setTitle("LED Cubes")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.50 USD"
+        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.50 USD",
       )
-      .setImage("https://i.postimg.cc/DfDYTgDD/led-cubes.png");
+      .setImage("https://i.postimg.cc/tCZBxZQ4/led-cubes.png");
 
     const strobesEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("Strobes")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 100 Robux | <:paypal:1056105041695621160> $1.00 USD"
+        "Price: <:robux:1056105131789258822> 100 Robux | <:paypal:1056105041695621160> $1.00 USD",
       )
-      .setImage("https://i.postimg.cc/g0NNBq8g/strobes.png");
+      .setImage("https://i.postimg.cc/mkcyCqn5/strobes.png");
 
     const washesEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("Washes")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 200 Robux | <:paypal:1056105041695621160> $2.00 USD"
+        "Price: <:robux:1056105131789258822> 200 Robux | <:paypal:1056105041695621160> $2.00 USD",
       )
-      .setImage("https://i.postimg.cc/wMs2vCPr/washes.png");
+      .setImage("https://i.postimg.cc/nV5kpFjb/washes.png");
 
     const magicPanelsEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("Magic Panels")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $1.75 USD"
+        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $1.75 USD",
       )
-      .setImage("https://i.postimg.cc/4xv8pTdk/magic-panels.png");
+      .setImage("https://i.postimg.cc/m2v8NLBN/magic-panels.png");
 
     const blindersEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("Blinders")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 75 Robux | <:paypal:1056105041695621160> $0.75 USD"
+        "Price: <:robux:1056105131789258822> 75 Robux | <:paypal:1056105041695621160> $0.75 USD",
       )
-      .setImage("https://i.postimg.cc/J4DvDgZM/blinders.png");
+      .setImage("https://i.postimg.cc/ZR4QPTPD/blinders.png");
 
     const jdc1Embed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("JDC1")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $1.75 USD"
+        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $1.75 USD",
       )
-      .setImage("https://i.postimg.cc/hjZZhbGX/jdc1.png");
+      .setImage("https://i.postimg.cc/XJssw9Yp/jdc1.png");
 
     const ledBarsEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("LED Bars")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $1.75 USD"
+        "Price: <:robux:1056105131789258822> 175 Robux | <:paypal:1056105041695621160> $1.75 USD",
       )
-      .setImage("https://i.postimg.cc/4yr8QfVZ/led-bars.png");
+      .setImage("https://i.postimg.cc/pr7kSx8v/led-bars.png");
 
     const followSpotlightsEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("Follow Spotlights")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.50 USD"
+        "Price: <:robux:1056105131789258822> 50 Robux | <:paypal:1056105041695621160> $0.50 USD",
       )
-      .setImage("https://i.postimg.cc/Px5FtFdG/follow-spotlights.png");
+      .setImage("https://i.postimg.cc/sx00R7kt/follow-spotlights.png");
 
     const profileFixturesEmbed = new EmbedBuilder()
       .setColor(0x2b2d31)
       .setTitle("Profile Fixtures")
       .setDescription(
-        "Price: <:robux:1056105131789258822> 250 Robux | <:paypal:1056105041695621160> $2.50 USD"
+        "Price: <:robux:1056105131789258822> 250 Robux | <:paypal:1056105041695621160> $2.50 USD",
       )
-      .setImage("https://i.postimg.cc/PqtS4FpL/profile-fixtures.png");
+      .setImage("https://i.postimg.cc/SKrdhc8D/profile-fixtures.png");
+
+    const pyrotechnicsEmbed = new EmbedBuilder()
+      .setColor(0x2b2d31)
+      .setTitle("Pyrotechnics")
+      .setDescription(
+        "Price: <:robux:1056105131789258822> 100 Robux | <:paypal:1056105041695621160> $1.00 USD",
+      )
+      .setImage("https://i.postimg.cc/Wbk74BgD/pyrotechnics.png");
+
+    const parsEmbed = new EmbedBuilder()
+      .setColor(0x2b2d31)
+      .setTitle("Pars")
+      .setDescription(
+        "Price: <:robux:1056105131789258822> 75 Robux | <:paypal:1056105041695621160> $0.75 USD",
+      )
+      .setImage("https://i.postimg.cc/4NnrD2JQ/pars.png");
 
     await channel.send({
       embeds: [
@@ -91,7 +107,9 @@ module.exports = {
         blindersEmbed,
         jdc1Embed,
         ledBarsEmbed,
+        parsEmbed,
         followSpotlightsEmbed,
+        pyrotechnicsEmbed,
       ],
     });
     await interaction.reply({
